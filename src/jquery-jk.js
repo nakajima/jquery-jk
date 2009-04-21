@@ -45,9 +45,23 @@
   $.fn.selectOn = selectOn;
 
   // handlers
-  var PREV = 107; // 'k'
-  var NEXT = 106; // 'j'
-  var SELECT = 120; // 'x'
+  $.jk = {
+    PREV: 'k',
+    NEXT: 'j',
+    SELECT: 'x'
+  }
+
+  function nextKey() {
+    return $.jk.NEXT.charCodeAt();
+  }
+
+  function prevKey() {
+    return $.jk.PREV.charCodeAt();
+  }
+
+  function selectKey() {
+    return $.jk.SELECT.charCodeAt();
+  }
 
   function attempt(event) {
     if (!event.which)
@@ -56,13 +70,13 @@
     if ($(event.target).is(':input'))
       return;
 
-    if (event.which == NEXT)
+    if (event.which == nextKey())
       $('.jk').focusOn('next');
 
-    if (event.which == PREV)
+    if (event.which == prevKey())
       $('.jk').focusOn('prev');
 
-    if (event.which == SELECT)
+    if (event.which == selectKey())
       $('.jk').selectOn();
   }
 

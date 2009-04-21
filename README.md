@@ -38,6 +38,18 @@ on the parent element.
 * `paginate:next` When no next element is available
 * `paginate:prev` When no previous element is available
 
+## Customizing Keys
+
+To specify which keys to use for each action, you can update
+the `$.jk` object:
+
+* `$.jk.NEXT` Next element (default: `j`)
+* `$.jk.PREV` Previous element (default: `k`)
+* `$.jk.SELECT` Add element to selected elements (default `x`)
+
+Just change one of these values to a different letter. I'm still
+working on arrows and modifiers. Fork or forgive please.
+
 <pre>
 (c) Copyright 2009 Pat Nakajima
 
