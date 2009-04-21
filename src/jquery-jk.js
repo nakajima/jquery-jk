@@ -13,15 +13,17 @@
   }
 
   function focusOn(dir) {
-    if (!dir || !this.focused().size()) {
+    if (!this.focused()) {
       return this.find('*:first').addClass('focus');
     }
 
-    var focused = this.focused();
-
-    if ((updated = focused[dir]()).size()) {
-      focused.trigger('focus:lost').removeClass('focus');
-      updated.trigger('focus:added').addClass('focus')
+    var focusedOld = this.focused();
+    var focusedNew = focusedOld[dir]();
+    if (focusedNew.size()) {
+      focusedOld.trigger('focus:lost').removeClass('focus');
+      focusedNew.trigger('focus:added').addClass('focus')
+    } else {
+      this.trigger('paginate:' + dir);
     }
   }
 

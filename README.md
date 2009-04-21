@@ -14,10 +14,29 @@ When an item is selected, it gets the class name `selected`.
 
 **View the spec/suite.html** for more info.
 
-### Events
+## Events
 
-Custom events are triggered when an element gets/loses focus
-or selection.
+Custom events are triggered at different times:
+
+### Focus
+
+* `focus:added` When element gets focus
+* `focus:lost` When element gets focus
+
+### Selection
+
+* `selection:added` When element gets selection
+* `selection:lost` When element gets selection
+
+### Pagination
+
+These events are triggered when you can't traverse any further
+in certain direction. They're a good hook for knowing when to
+load additional elements or change the page. They are triggered
+on the parent element.
+
+* `paginate:next` When no next element is available
+* `paginate:prev` When no previous element is available
 
 <pre>
 (c) Copyright 2009 Pat Nakajima

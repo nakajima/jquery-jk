@@ -54,12 +54,27 @@ Screw.Unit(function() {
         expect(elem.find('li:first')).to(match_selector, '.focus');
       });
 
-      it("does not exceed upper boundary", function() {
+      it("triggers lower boundary event", function() {
+        var called = false;
+        elem.find('li:first').addClass('focus');
+        elem.bind('paginate:prev', function() { called = true; })
+        elem.focusOn('prev');
+        expect(called).to(be_true);
+      });
+
+      it("does not exceed upper paginate boundary", function() {
         elem.find('li:last').addClass('focus');
         elem.focusOn('next');
         expect(elem.find('li:last')).to(match_selector, '.focus');
       });
-    });
 
+      it("triggers upper boundary paginate event", function() {
+        var called = false;
+        elem.find('li:last').addClass('focus');
+        elem.bind('paginate:next', function() { called = true; })
+        elem.focusOn('next');
+        expect(called).to(be_true);
+      });
+    });
   });
 });
