@@ -19,6 +19,7 @@
 
     var focusedOld = this.focused();
     var focusedNew = focusedOld[dir]();
+
     if (focusedNew.size()) {
       focusedOld.trigger('focus:lost').removeClass('focus');
       focusedNew.trigger('focus:added').addClass('focus')
@@ -50,6 +51,9 @@
 
   function attempt(event) {
     if (!event.which)
+      return;
+
+    if ($(event.target).is(':input'))
       return;
 
     if (event.which == NEXT)
