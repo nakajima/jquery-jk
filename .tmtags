@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+Array	spec/screw-unit/jquery-1.2.6.js	/^		Array.prototype.push.apply( this, elems );$/;"	class	line:146
+Array.push	spec/screw-unit/jquery-1.2.6.js	/^		Array.prototype.push.apply( this, elems );$/;"	method	line:146
+ret	spec/screw-unit/jquery-1.2.6.js	/^		var ret = "";$/;"	variable	line:205
+isArrayLike	spec/screw-unit/jquery-1.2.6.js	/^		var isArrayLike = selector.length && selector[selector.length - 1] !== undefined && !selector.nodeType;$/;"	variable	line:386
+root	spec/screw-unit/jquery-1.2.6.js	/^		function root( elem, cur ) {$/;"	function	line:531
+jQuery.fn.init	spec/screw-unit/jquery-1.2.6.js	/^jQuery.fn.init.prototype = jQuery.fn;$/;"	class	line:541
+evalScript	spec/screw-unit/jquery-1.2.6.js	/^function evalScript( i, elem ) {$/;"	function	line:543
+now	spec/screw-unit/jquery-1.2.6.js	/^function now(){$/;"	function	line:558
+userAgent	spec/screw-unit/jquery-1.2.6.js	/^var userAgent = navigator.userAgent.toLowerCase();$/;"	variable	line:1166
+num	spec/screw-unit/jquery-1.2.6.js	/^function num(elem, prop) {$/;"	function	line:1266
+	spec/screw-unit/jquery-1.2.6.js	/^	show: function(speed,callback){$/;"	regex	line:3785
+	spec/screw-unit/jquery-1.2.6.js	/^	show: function(){$/;"	regex	line:4069
+fn.fn	spec/screw-unit/jquery.fn.js	
