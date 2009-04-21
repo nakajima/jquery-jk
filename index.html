@@ -44,7 +44,7 @@
     </style>
     <script type="text/javascript" charset="utf-8">
       (function($) {
-        $(document).click(function() {
+        $(document).click(function(event) {
           var elem = $(event.target);
           if (elem.is('li')) {
             elem.toggleClass('selected');
