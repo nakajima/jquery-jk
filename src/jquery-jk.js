@@ -1,13 +1,5 @@
 // jquery-jk
 (function($) {
-  // helpers
-
-  $.fn.or = function(alt) {
-    return this.size() ? this : $(alt);
-  }
-
-  //codez
-
   function focused() {
     return this.find('.focus');
   }
