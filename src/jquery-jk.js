@@ -5,7 +5,7 @@
   }
 
   function focusOn(dir) {
-    if (!this.focused()) {
+    if (!this.focused().length) {
       return this.find('*:first').addClass('focus');
     }
 
